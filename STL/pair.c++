@@ -8,7 +8,11 @@ void explainpair(){
 
    {
        pair<int,pair<int,int>> p={4,{5,6}};
-       cout<<p.first<<" "<<p.second.second<<" "<<p.second.second;
+       cout<<p.first<<" "<<p.second.second<<" "<<p.second.second<<endl;
+   }
+   {
+       pair<int,int> arr[]={{1,2},{33,4},{3,5}};
+       cout<<arr[2].second;
    }
 }
 int main(){
