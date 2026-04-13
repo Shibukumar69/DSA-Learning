@@ -1,14 +1,19 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int largestElement(vector<int>&arr,int n){
+int SecondlargestElement(vector<int>&arr,int n){
 int largest=arr[0];
+int secondlargest=arr[0];
 for(int i=0;i<n;i++){
     if(arr[i]>largest){
+        secondlargest=largest;
         largest=arr[i];
+    } 
+    else if(arr[i]<largest && arr[i]>secondlargest){
+        secondlargest=arr[i];
     }
 }
-return largest;
+return secondlargest;
 }
 
 int main(){
@@ -19,8 +24,8 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    int largest=largestElement(arr,n);
-    cout<<"Largest element is :"<<largest;
+    int Secondlargest=SecondlargestElement(arr,n);
+    cout<<"Second largest element is :"<<Secondlargest;
 
     return 0;
 
